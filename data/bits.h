@@ -1,30 +1,30 @@
-int bitAnd(int, int);
-int test_bitAnd(int, int);
-int getByte(int, int);
-int test_getByte(int, int);
-int logicalShift(int, int);
-int test_logicalShift(int, int);
-int bitCount(int);
-int test_bitCount(int);
-int bang(int);
-int test_bang(int);
-int tmin();
-int test_tmin();
-int fitsBits(int, int);
-int test_fitsBits(int, int);
-int divpwr2(int, int);
-int test_divpwr2(int, int);
+int bitXor(int, int);
+int test_bitXor(int, int);
+int tmin(void);
+int test_tmin(void);
+
+int isTmax(int);
+int test_isTmax(int);
+int allOddBits(void);
+int test_allOddBits(void);
 int negate(int);
 int test_negate(int);
-int isPositive(int);
-int test_isPositive(int);
+
+int isAsciiDigit(int);
+int test_isAsciiDigit(int);
+int conditional(int, int, int);
+int test_conditional(int, int, int);
 int isLessOrEqual(int, int);
 int test_isLessOrEqual(int, int);
-int ilog2(int);
-int test_ilog2(int);
-unsigned float_neg(unsigned);
-unsigned test_float_neg(unsigned);
-unsigned float_i2f(int);
-unsigned test_float_i2f(int);
-unsigned float_twice(unsigned);
-unsigned test_float_twice(unsigned);
+
+int logicalNeg(int);
+int test_logicalNeg(int);
+int howManyBits(int);
+int test_howManyBits(int);
+
+unsigned floatScale2(unsigned);
+unsigned test_floatScale2(unsigned);
+int floatFloat2Int(unsigned);
+int test_floatFloat2Int(unsigned);
+unsigned floatPower2(int);
+unsigned test_floatPower2(int);
