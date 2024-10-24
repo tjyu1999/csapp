@@ -13,6 +13,7 @@ fshow: fshow.c
 ishow: ishow.c
 	$(CC) $(CFLAGS) -o ishow ishow.c
 
+# Forces a recompile. Used by the driver program. 
 btestexplicit:
 	$(CC) $(CFLAGS) $(LIBS) -o btest bits.c btest.c decl.c tests.c 
 
