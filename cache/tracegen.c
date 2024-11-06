@@ -83,6 +83,7 @@ int main(int argc, char *argv[]) {
             MARKER_START = 33;
             (*func_list[i].func_ptr)(M, N, A, B);
             MARKER_END = 34;
+            
             if (!validate(i, M, N, A, B))
                 return i + 1;
         }
