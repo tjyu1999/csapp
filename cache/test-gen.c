@@ -60,7 +60,7 @@ void eval_perf(unsigned int s, unsigned int E, unsigned int b) {
 
     // open the complete trace file
     FILE *full_trace_fp;  
-    FILE *\part_trace_fp; 
+    FILE *part_trace_fp; 
 
     // evaluate the performance of each registered transpose function
     for (int i = 0; i < func_counter; ++i) {
