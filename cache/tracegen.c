@@ -73,15 +73,15 @@ int main(int argc, char *argv[]) {
     initMatrix(M, N, A, B); // fill A with data
 
     // record marker addresses
-    FILE* marker_fp = fopen(".marker", "w");
+    FILE *marker_fp = fopen(".marker", "w");
     assert(marker_fp);
-    fprintf(marker_fp, "%llx %llx", (unsigned long long int)&MARKER_START, (unsigned long long int)&MARKER_END);
+    fprintf(marker_fp, "%llx %llx", (unsigned long long int) &MARKER_START, (unsigned long long int) &MARKER_END);
     fclose(marker_fp);
 
     if (selectedFunc == -1) { // invoke registered transpose functions
         for (int i = 0; i < func_counter; ++i) {
             MARKER_START = 33;
-            (*func_list[i].func_ptr)(M, N, A, B);
+            (*func_list[i].func_ptr) (M, N, A, B);
             MARKER_END = 34;
             
             if (!validate(i, M, N, A, B))
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
     }
     else {
         MARKER_START = 33;
-        (*func_list[selectedFunc].func_ptr)(M, N, A, B);
+        (*func_list[selectedFunc].func_ptr) (M, N, A, B);
         MARKER_END = 34;
         
         if (!validate(selectedFunc, M, N, A, B))
