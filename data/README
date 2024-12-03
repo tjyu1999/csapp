@@ -42,7 +42,7 @@ dlc returns silently if there are no problems with your code.
 Otherwise it prints messages that flag any problems.  Running dlc with
 the -e switch:
 
-    	unix> ./dlc -e bits.c
+       unix> ./dlc -e bits.c
 
 causes dlc to print counts of the number of operators used by each function.
 
@@ -58,16 +58,16 @@ additional code to create a program (or test harness) named btest.
 
 To compile and run the btest program, type:
 
-    unix> make btest
-    unix> ./btest [optional cmd line args]
+       unix> make btest
+       unix> ./btest [optional cmd line args]
 
 You will need to recompile btest each time you change your bits.c
 program. When moving from one platform to another, you will want to
 get rid of the old version of btest and generate a new one.  Use the
 commands:
 
-    unix> make clean
-    unix> make btest
+       unix> make clean
+       unix> make btest
 
 Btest tests your code for correctness by running millions of test
 cases on each function.  It tests wide swaths around well known corner
@@ -79,30 +79,30 @@ expected result, and then terminates the testing for that function.
 
 Here are the command line options for btest:
 
-  unix> ./btest -h
-  Usage: ./btest [-hg] [-r <n>] [-f <name> [-1|-2|-3 <val>]*] [-T <time limit>]
-    -1 <val>  Specify first function argument
-    -2 <val>  Specify second function argument
-    -3 <val>  Specify third function argument
-    -f <name> Test only the named function
-    -g        Format output for autograding with no error messages
-    -h        Print this message
-    -r <n>    Give uniform weight of n for all problems
-    -T <lim>  Set timeout limit to lim
+       unix> ./btest -h
+       Usage: ./btest [-hg] [-r <n>] [-f <name> [-1|-2|-3 <val>]*] [-T <time limit>]
+         -1 <val>  Specify first function argument
+         -2 <val>  Specify second function argument
+         -3 <val>  Specify third function argument
+         -f <name> Test only the named function
+         -g        Format output for autograding with no error messages
+         -h        Print this message
+         -r <n>    Give uniform weight of n for all problems
+         -T <lim>  Set timeout limit to lim
 
 Examples:
 
-  Test all functions for correctness and print out error messages:
-  unix> ./btest
+    Test all functions for correctness and print out error messages:
+    unix> ./btest
 
-  Test all functions in a compact form with no error messages:
-  unix> ./btest -g
+    Test all functions in a compact form with no error messages:
+    unix> ./btest -g
 
-  Test function foo for correctness:
-  unix> ./btest -f foo
+    Test function foo for correctness:
+    unix> ./btest -f foo
 
-  Test function foo for correctness with specific arguments:
-  unix> ./btest -f foo -1 27 -2 0xf
+    Test function foo for correctness with specific arguments:
+    unix> ./btest -f foo -1 27 -2 0xf
 
 Btest does not check your code for compliance with the coding
 guidelines.  Use dlc to do that.
