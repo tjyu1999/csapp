@@ -19,8 +19,8 @@ int main(int argc, char **argv) {
 	    fprintf(stderr, "Usage: %s <n>\n", argv[0]);
 	    exit(0);
     }
+	
     secs = atoi(argv[1]);
-
     if (fork() == 0) { /* child */
 	    for (int i = 0; i < secs; ++i)
 	        sleep(1);
